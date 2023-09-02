@@ -22,6 +22,9 @@ enemyX_change, enemyY_change = 4, 40
 def player(x, y):
     screen.blit(playerImg, (x,y))
 
+def enemy(x, y):
+    screen.blit(enemyImg, (x, y))
+
 running = True
 while running:
     screen.fill((0, 0, 0))
@@ -44,11 +47,14 @@ while running:
         if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
             playerX_change = 0
 
+    #Player
     playerX += playerX_change
     if playerX <= 0:
         playerX = 0
     elif playerX >= 736:
         playerX = 736
+
+    #Enemy
 
     player(playerX, playerY)
 

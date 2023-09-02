@@ -1,6 +1,7 @@
 import pygame
 from pygame import mixer
 import random
+import math
 
 pygame.init()
 
@@ -45,7 +46,6 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
         return True
     else:
         return False
-
 
 running = True
 while running:

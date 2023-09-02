@@ -19,6 +19,12 @@ enemyX = random.randint(0, 736)
 enemyY = random.randint(50, 150)
 enemyX_change, enemyY_change = 4, 40
 
+# Bullet
+bulletImg = pygame.image.load('bullet.png')
+bulletX, bulletY = 0, 480
+bulletX_change, bulletY_change = 0, 3
+bullet_state = 'ready'
+
 #score
 score_value = 0
 

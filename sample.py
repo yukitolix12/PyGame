@@ -34,6 +34,19 @@ def player(x, y):
 def enemy(x, y):
     screen.blit(enemyImg, (x, y))
 
+def fire_bullet(x, y):
+    global bullet_state
+    bullet_state = 'fire'
+    screen.blit(bulletImg, (x + 16, y + 10))
+
+def isCollision(enemyX, enemyY, bulletX, bulletY):
+    distance = math.sqrt(math.pow(enemyX - bulletX, 2) + math.pow(enemyY - bulletY, 2))
+    if distance < 27:
+        return True
+    else:
+        return False
+
+
 running = True
 while running:
     screen.fill((0, 0, 0))

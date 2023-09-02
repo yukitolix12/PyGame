@@ -12,7 +12,11 @@ playerImg = pygame.image.load('player.png')
 playerX,playerY = 370, 480
 playerX_change = 0
 
-# mixer.Sound('laser.wav').play()
+# Enemy
+enemyImg = pygame.image.load('enemy.png')
+enemyX = random.randint(0, 736)
+enemyY = random.randint(50, 150)
+enemyX_change, enemyY_change = 4, 40
 
 def player(x, y):
     screen.blit(playerImg, (x,y))

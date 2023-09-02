@@ -34,12 +34,17 @@ while running:
                 #if bullet_state is 'ready':
                 #  bulletX = playerX
                 #  fire_bullet(bulletX, bulletY)
-                
+
     if event.type == pygame.KEYUP:
         if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
             playerX_change = 0
 
     playerX += playerX_change
+    if playerX <= 0:
+        playerX = 0
+    elif playerX >= 736:
+        playerX = 736
+
     player(playerX, playerY)
 
     pygame.display.update()

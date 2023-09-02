@@ -16,6 +16,9 @@ mixer.Sound('laser.wav').play()
 running = True
 while running:
     screen.blit(img, (X,Y))
+    font = pygame.font.SysFont(None,80)
+    message = font.render('Hello world',False,(255,255,255))
+    screen.blit(message, (20,50))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False

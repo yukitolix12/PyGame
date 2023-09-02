@@ -1,4 +1,5 @@
 import pygame
+from pygame import mixer
 
 pygame.init()
 
@@ -9,6 +10,8 @@ pygame.display.set_caption('invaders Game')
 img = pygame.image.load('player.png')
 X = 370
 Y = 480
+
+mixer.Sound('laser.wav').play()
 
 running = True
 while running:

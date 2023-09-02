@@ -87,6 +87,15 @@ while running:
         enemyX_change = -4
         enemyY += enemyY_change
 
+    collision = isCollision(enemyX, enemyY, bulletX, bulletY)
+    if collision:
+        bulletY = 480
+        bullet_state = 'ready'
+        score_value += 1
+        enemyX = random.randint(0, 736)
+        enemyY = random.randint(50, 150)
+
+
     # Score
     font = pygame.font.SysFont(None, 32) # フォントの作成　Noneはデフォルトのfreesansbold.ttf
     score = font.render(f"Score : {str(score_value)}", True, (255,255,255)) # テキストを描画したSurfaceの作成

@@ -19,14 +19,13 @@ def player(x, y):
 
 running = True
 while running:
+    screen.fill((0, 0, 0))
     
-    # font = pygame.font.SysFont(None,80)
-    # message = font.render('Hello world',False,(255,255,255))
-    # screen.blit(message, (20,50))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
+    playerX += 1.5
     player(playerX, playerY)
-    
+
     pygame.display.update()
